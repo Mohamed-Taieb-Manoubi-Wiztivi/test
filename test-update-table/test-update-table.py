@@ -51,7 +51,7 @@ S3bucket_node3 = glueContext.getSink(
     enableUpdateCatalog=True,
     transformation_ctx="S3bucket_node3",
 )
-S3bucket_node3.setCatalogInfo(catalogDatabase="test-db", catalogTableName="test-table")
+#S3bucket_node3.setCatalogInfo(catalogDatabase="test-db", catalogTableName="test-table")
 S3bucket_node3.setFormat("glueparquet")
 S3bucket_node3.writeFrame(gluedf)
 job.commit()
