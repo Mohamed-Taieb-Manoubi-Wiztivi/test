@@ -30,16 +30,6 @@ from pyspark.sql.functions import col
 df2 = df1.withColumn("timestamp",to_timestamp(col("timestamp"))).withColumn("year", date_format(col("timestamp"), "y")).withColumn("month", date_format(col("timestamp"), "M")).withColumn("day", date_format(col("timestamp"), "d")).withColumn("hour", date_format(col("timestamp"), "H"))
 gluedf = DynamicFrame.fromDF( df2, glueContext, "gluedf")
 
-"""
-S3bucket_node3 = glueContext.write_dynamic_frame.from_options(
-    frame=gluedf,
-    connection_type="s3",
-    format="glueparquet",
-    connection_options={"path": "s3://stored-data-bucket1", "partitionKeys": ["year", "month", "day", "hour"]},
-    format_options={"compression": "snappy"},
-    transformation_ctx="S3bucket_node3",
-)
-"""
 
 # Script generated for node S3 bucket
 S3bucket_node3 = glueContext.getSink(
