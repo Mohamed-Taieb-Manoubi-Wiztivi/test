@@ -3,7 +3,7 @@
   "description" : "",
   "role" : "arn:aws:iam::583069474624:role/service-role/AWSGlueServiceRole-simpleexemple",
   "executionProperty" : {
-    "maxConcurrentRuns" : 1
+    "maxConcurrentRuns" : 4
   },
   "command" : {
     "name" : "glueetl",
@@ -32,7 +32,7 @@
   "sourceControlDetails" : {
     "provider" : "GITHUB",
     "repository" : "test",
-    "branch" : "main",
+    "branch" : "new-branch",
     "folder" : "test-update-table"
   }
 }
