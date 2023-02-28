@@ -3,7 +3,7 @@
   "description" : "",
   "role" : "arn:aws:iam::583069474624:role/service-role/AWSGlueServiceRole-simpleexemple",
   "executionProperty" : {
-    "maxConcurrentRuns" : 4
+    "maxConcurrentRuns" : 2
   },
   "command" : {
     "name" : "glueetl",
